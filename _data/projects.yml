@@ -1,0 +1,54 @@
+# ─────────────────────────────────────────────
+#  _data/projects.yml
+#  Edit this file to update all projects site-wide.
+# ─────────────────────────────────────────────
+
+- id: moodos
+  title: "MoodOS"
+  oneliner: "Daily entries → generates a saved daily report with summary, mood analysis, and keyword extraction."
+  description: "A personal OS for the mind. Write daily journal entries and MoodOS synthesizes them into a structured daily report — mood score, keyword cloud, pattern insights — all persisted and searchable."
+  tech: [FastAPI, PostgreSQL, React, TypeScript, OpenAI API]
+  tags: [NLP, Full-Stack, Product]
+  featured: true
+  github: "<GITHUB_MOODOS_LINK>"
+  demo: ""
+
+- id: project-a
+  title: "<PROJECT A TITLE>"
+  oneliner: "<One-line description of Project A.>"
+  description: "<Longer description of Project A.>"
+  tech: [Python, React, "<TECH>"]
+  tags: [Full-Stack, "<TAG>"]
+  featured: true
+  github: "<GITHUB_A_LINK>"
+  demo: ""
+
+- id: project-b
+  title: "<PROJECT B TITLE>"
+  oneliner: "<One-line description of Project B.>"
+  description: "<Longer description of Project B.>"
+  tech: ["<TECH1>", "<TECH2>"]
+  tags: ["<TAG1>", "<TAG2>"]
+  featured: true
+  github: "<GITHUB_B_LINK>"
+  demo: ""
+
+- id: project-c
+  title: "<PROJECT C TITLE>"
+  oneliner: "<One-line description.>"
+  description: "<Description.>"
+  tech: ["<TECH>"]
+  tags: ["<TAG>"]
+  featured: false
+  github: "<GITHUB_C_LINK>"
+  demo: ""
+
+- id: project-d
+  title: "<PROJECT D TITLE>"
+  oneliner: "<One-line description.>"
+  description: "<Description.>"
+  tech: ["<TECH>"]
+  tags: ["<TAG>"]
+  featured: false
+  github: "<GITHUB_D_LINK>"
+  demo: ""
