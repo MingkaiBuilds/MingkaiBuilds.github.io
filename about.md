@@ -1,94 +1,89 @@
 ---
 layout: default
-title: "About"
-description: "About Mikail Stewart (明凯) — full-stack engineer focused on NLP and product systems."
-permalink: /about/
+title: About
+description: About Mikail Stewart — full-stack engineer and NLP systems builder.
 ---
 
 <div class="about-page">
   <div class="container">
+    <div class="about-page-grid">
 
-    <!-- Name + role -->
-    <div class="about-page__hero fade-in">
-      <h1 class="about-page__name">
-        Mikail Stewart
-        <span class="about-page__name-chinese">明凯</span>
-      </h1>
-      <p class="about-page__role">Full-Stack Engineer · NLP Systems · Product</p>
-    </div>
+      <!-- Main content -->
+      <div>
+        <h1 class="hero-name" style="margin-bottom:2.5rem;">
+          Mikail<br>Stewart<span class="hero-chi" style="font-size:0.28em; vertical-align:super;">明凯</span>
+        </h1>
 
-    <!-- Three sections -->
-    <div class="about-sections">
+        <div class="about-section">
+          <h3>Background</h3>
+          <p>
+            I'm a full-stack engineer with roots in backend systems and a growing focus on applied NLP. I care about building software that works cleanly under the hood and actually solves problems worth solving — not just technically correct, but genuinely useful.
+          </p>
+          <p style="margin-top:1rem;">
+            My name in Chinese is 明凯 (míng kǎi) — 明 means bright or clear; 凯 means triumphant. I like to think it shows up in how I approach code: clarity first, then ship.
+          </p>
+        </div>
 
-      <div class="about-block fade-in">
-        <p class="about-block__label">Background</p>
-        <p>
-          I'm a software engineer with a foundation in full-stack development and a growing
-          obsession with how language models can be embedded into real products — not as features,
-          but as structural layers that make the whole thing smarter.
-        </p>
-        <p>
-          I've worked across the stack: designing PostgreSQL schemas, building FastAPI services,
-          and crafting React + TypeScript interfaces that feel fast and intentional.
-        </p>
+        <div class="about-section">
+          <h3>What I'm Building</h3>
+          <p>
+            Right now I'm focused on <strong style="color:var(--text); font-weight:500;">MoodOS</strong> — a personal journaling system that processes daily entries through an NLP pipeline to produce structured reports: mood curves, keyword extraction, and longitudinal summaries. The backend is FastAPI + PostgreSQL; the frontend is React/TypeScript.
+          </p>
+          <p style="margin-top:1rem;">
+            I'm also exploring how to build product systems that are genuinely maintainable at the seams — good data contracts, typed APIs, and UIs that stay out of the user's way.
+          </p>
+        </div>
+
+        <div class="about-section">
+          <h3>Interests</h3>
+          <p>
+            Language — both the natural kind and the programming kind. The design of APIs. How writing daily changes the way you think. Quiet mornings and long sessions. Building things that compound over time.
+          </p>
+        </div>
       </div>
 
-      <div class="about-block fade-in">
-        <p class="about-block__label">What I'm Building</p>
-        <p>
-          Right now I'm shipping <strong style="color: var(--text-primary); font-weight: 400;">MoodOS</strong> —
-          a journaling system that transforms daily entries into structured personal reports.
-          Summary, mood score, keyword extraction, pattern insights. Think of it as a personal
-          intelligence layer on top of your own words.
-        </p>
-        <p>
-          I'm particularly interested in the intersection of NLP, personal productivity tools,
-          and the design challenge of making AI output feel <em>useful rather than impressive</em>.
-        </p>
-      </div>
+      <!-- Sidebar -->
+      <aside class="about-sidebar">
+        <div class="sidebar-card">
+          <h4>Connect</h4>
+          <div class="sidebar-links">
+            <a href="https://github.com/<GITHUB_USERNAME>" class="sidebar-link" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              github.com/<GITHUB_USERNAME>
+            </a>
+            <a href="https://linkedin.com/in/<LINKEDIN_USERNAME>" class="sidebar-link" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+            <a href="mailto:<EMAIL>" class="sidebar-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <EMAIL>
+            </a>
+          </div>
+        </div>
 
-      <div class="about-block fade-in">
-        <p class="about-block__label">Interests</p>
-        <p>
-          Language and its structure. The design of information. How great products earn daily habits.
-          The philosophy of tools — why some things feel like extensions of thought and others don't.
-        </p>
-        <p>
-          Outside of code: reading (philosophy, linguistics, system design), building small hardware
-          experiments, and long walks where most of the actual problems get solved.
-        </p>
-      </div>
+        <div class="sidebar-card">
+          <h4>Stack</h4>
+          <div class="skills-list">
+            <span class="tech-chip">Python</span>
+            <span class="tech-chip">FastAPI</span>
+            <span class="tech-chip">TypeScript</span>
+            <span class="tech-chip">React</span>
+            <span class="tech-chip">PostgreSQL</span>
+            <span class="tech-chip">Docker</span>
+            <span class="tech-chip">NLP</span>
+            <span class="tech-chip">REST APIs</span>
+            <span class="tech-chip">Git</span>
+          </div>
+        </div>
 
-      <div class="about-block fade-in">
-        <p class="about-block__label">Stack & Tools</p>
-        <p>
-          <strong style="color: var(--accent); font-family: 'DM Mono', monospace; font-size: 0.85rem;">Python · FastAPI · PostgreSQL</strong><br>
-          Backend services, data modeling, REST + async APIs.
-        </p>
-        <p style="margin-top: 12px;">
-          <strong style="color: var(--accent); font-family: 'DM Mono', monospace; font-size: 0.85rem;">React · TypeScript · CSS</strong><br>
-          Component-first frontends with a strong sense of interface design.
-        </p>
-        <p style="margin-top: 12px;">
-          <strong style="color: var(--accent); font-family: 'DM Mono', monospace; font-size: 0.85rem;">OpenAI API · NLP pipelines</strong><br>
-          LLM integration, prompt engineering, text analysis.
-        </p>
-      </div>
+        <div class="sidebar-card">
+          <h4>Status</h4>
+          <p style="font-family:var(--font-mono); font-size:0.82rem; color:var(--accent); margin-bottom:0.4rem;">◉ Open to roles</p>
+          <p style="font-size:0.84rem;">Seeking full-stack, backend, or NLP engineering opportunities. Open to remote.</p>
+        </div>
+      </aside>
 
     </div>
-
-    <!-- Contact -->
-    <div class="section__header fade-in" style="margin-bottom: 32px;">
-      <h2 class="section__title">Contact</h2>
-      <div class="section__line"></div>
-    </div>
-    <div class="fade-in">
-      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 24px; max-width: 460px; font-weight: 300; line-height: 1.7;">
-        I'm open to full-time roles, contract work, and interesting collaborations.
-        If you're building something ambitious, reach out.
-      </p>
-      {% include contact-links.html %}
-    </div>
-
   </div>
 </div>

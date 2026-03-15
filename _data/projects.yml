@@ -1,54 +1,52 @@
-# ─────────────────────────────────────────────
-#  _data/projects.yml
-#  Edit this file to update all projects site-wide.
-# ─────────────────────────────────────────────
-
 - id: moodos
-  title: "MoodOS"
-  oneliner: "Daily entries → generates a saved daily report with summary, mood analysis, and keyword extraction."
-  description: "A personal OS for the mind. Write daily journal entries and MoodOS synthesizes them into a structured daily report — mood score, keyword cloud, pattern insights — all persisted and searchable."
-  tech: [FastAPI, PostgreSQL, React, TypeScript, OpenAI API]
-  tags: [NLP, Full-Stack, Product]
+  title: MoodOS
+  tagline: Daily entries generate a saved report — summary, mood, and keywords.
+  description: A journaling system that transforms raw daily entries into structured daily reports with mood analysis, keyword extraction, and longitudinal summaries. Built with a FastAPI backend, PostgreSQL persistence, and a React/TypeScript frontend.
+  tech: [FastAPI, PostgreSQL, React, TypeScript, NLP]
   featured: true
-  github: "<GITHUB_MOODOS_LINK>"
-  demo: ""
+  featured_order: 1
+  github: <GITHUB_MOODOS_LINK>
+  live: ""
+  status: active
 
 - id: project-a
-  title: "<PROJECT A TITLE>"
-  oneliner: "<One-line description of Project A.>"
-  description: "<Longer description of Project A.>"
-  tech: [Python, React, "<TECH>"]
-  tags: [Full-Stack, "<TAG>"]
+  title: Project Placeholder A
+  tagline: Short one-liner about what this project does and why it matters.
+  description: A longer description of the project. What problem does it solve? What's interesting about the technical approach?
+  tech: [Python, React, Redis]
   featured: true
-  github: "<GITHUB_A_LINK>"
-  demo: ""
+  featured_order: 2
+  github: <GITHUB_PROJECT_A_LINK>
+  live: ""
+  status: active
 
 - id: project-b
-  title: "<PROJECT B TITLE>"
-  oneliner: "<One-line description of Project B.>"
-  description: "<Longer description of Project B.>"
-  tech: ["<TECH1>", "<TECH2>"]
-  tags: ["<TAG1>", "<TAG2>"]
+  title: Project Placeholder B
+  tagline: Short one-liner about what this project does and why it matters.
+  description: A longer description of the project. What problem does it solve? What's interesting about the technical approach?
+  tech: [Go, PostgreSQL, Docker]
   featured: true
-  github: "<GITHUB_B_LINK>"
-  demo: ""
+  featured_order: 3
+  github: <GITHUB_PROJECT_B_LINK>
+  live: ""
+  status: active
 
 - id: project-c
-  title: "<PROJECT C TITLE>"
-  oneliner: "<One-line description.>"
-  description: "<Description.>"
-  tech: ["<TECH>"]
-  tags: ["<TAG>"]
+  title: Project C
+  tagline: Another project one-liner.
+  description: Description here.
+  tech: [Node.js, TypeScript, MongoDB]
   featured: false
-  github: "<GITHUB_C_LINK>"
-  demo: ""
+  github: <GITHUB_LINK>
+  live: ""
+  status: active
 
 - id: project-d
-  title: "<PROJECT D TITLE>"
-  oneliner: "<One-line description.>"
-  description: "<Description.>"
-  tech: ["<TECH>"]
-  tags: ["<TAG>"]
+  title: Project D
+  tagline: Another project one-liner.
+  description: Description here.
+  tech: [Python, FastAPI, ML]
   featured: false
-  github: "<GITHUB_D_LINK>"
-  demo: ""
+  github: <GITHUB_LINK>
+  live: ""
+  status: active

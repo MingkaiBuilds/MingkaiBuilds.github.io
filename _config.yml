@@ -1,31 +1,22 @@
-# ─────────────────────────────────────────────
-#  Dark Moon Portfolio — _config.yml
-# ─────────────────────────────────────────────
-title: "Mikail Stewart"
-tagline: "Full-stack engineer exploring NLP + product systems."
-description: "Portfolio of Mikail Stewart (明凯) — full-stack & NLP engineer."
-baseurl: ""          # set to "/repo-name" if not user/org pages
-url: "https://yourusername.github.io"
+title: Mikail Stewart
+description: Full-stack engineer exploring NLP + product systems.
+author: Mikail Stewart
+email: <EMAIL>
+baseurl: ""
+url: "https://<YOUR_GITHUB_USERNAME>.github.io"
 
-author:
-  name: "Mikail Stewart"
-  chinese_name: "明凯"
-  github: "<GITHUB_PROFILE_LINK>"
-  linkedin: "<LINKEDIN_LINK>"
-  email: "<EMAIL>"
+github_username: <GITHUB_USERNAME>
+linkedin_username: <LINKEDIN_USERNAME>
 
-# Build settings
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
 
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
+# github-pages gem already bundles all allowed plugins
+# do NOT list them here to avoid double-require conflicts
 
 exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
-  - node_modules
   - vendor
