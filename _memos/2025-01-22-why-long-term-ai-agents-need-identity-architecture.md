@@ -7,6 +7,6 @@ description: "The case for treating identity continuity as a first-class enginee
 status: draft
 ---
 
-As AI systems take on longer-horizon tasks — managing projects, sustaining relationships, operating autonomously over weeks and months — the absence of identity architecture creates compounding failures. This memo makes the engineering case for treating identity continuity as a first-class concern, not an afterthought.
+As AI systems take on longer-horizon tasks (managing projects, sustaining relationships, operating autonomously over weeks and months), the absence of identity architecture creates compounding failures. This memo makes the engineering case for treating identity continuity as a first-class concern, not an afterthought.
 
 The full memo will examine what breaks when identity architecture is absent and sketch the properties a sufficient architecture must have.

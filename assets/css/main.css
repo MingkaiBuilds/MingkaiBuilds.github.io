@@ -1,45 +1,62 @@
 /* ============================================================
-   WHITE & GOLD — Mikail Stewart / CIC Research
+   Computational Identity Continuity — Mikail Stewart
+   Palette: Gold (#D3AF37 / #C99900) + Purple (#4B006E) + Cream (#F7F7F7)
    Fonts: Cormorant Garamond + Inter + JetBrains Mono
    ============================================================ */
 
 /* ── Tokens ─────────────────────────────────────────────── */
 :root {
-  --bg:          #ffffff;
-  --bg-2:        #fafaf8;
-  --bg-3:        #f5f4f0;
-  --text:        #1a1a18;
-  --text-2:      #5a5a54;
-  --text-3:      #9a9a90;
-  --gold:        #b8922a;
-  --gold-light:  #d4a843;
-  --gold-dim:    rgba(184,146,42,0.12);
-  --gold-border: rgba(184,146,42,0.25);
-  --border:      rgba(26,26,24,0.08);
-  --border-2:    rgba(26,26,24,0.14);
-  --font-serif:  'Cormorant Garamond', Georgia, serif;
-  --font-body:   'Inter', system-ui, sans-serif;
-  --font-mono:   'JetBrains Mono', 'Courier New', monospace;
-  --transition:  0.2s ease;
-  --content-max: 720px;
-  --text-max:    68ch;
+  --bg:             #F7F7F7;
+  --bg-2:           #faf8f3;
+  --bg-3:           #EDE5B7;
+  --text:           #1a1a18;
+  --text-2:         #5a5a54;
+  --text-3:         #9a9a90;
+  --gold:           #D3AF37;
+  --gold-deep:      #C99900;
+  --gold-dim:       rgba(211,175,55,0.13);
+  --gold-border:    rgba(201,153,0,0.28);
+  --purple:         #4B006E;
+  --purple-dim:     rgba(75,0,110,0.07);
+  --purple-border:  rgba(75,0,110,0.18);
+  --border:         rgba(26,26,24,0.08);
+  --border-2:       rgba(26,26,24,0.14);
+  --font-serif:     'Cormorant Garamond', Georgia, serif;
+  --font-body:      'Inter', system-ui, sans-serif;
+  --font-mono:      'JetBrains Mono', 'Courier New', monospace;
+  --transition:     0.2s ease;
+  --content-max:    720px;
+  --text-max:       68ch;
+}
+
+/* ── Atmospheric base ────────────────────────────────────── */
+/*
+  The page exists in a different light.
+  Purple above: looking up into a deep sky.
+  Gold below: warm ground. Clean white between.
+*/
+html {
+  min-height: 100%;
+  background:
+    radial-gradient(ellipse 90% 35% at 50% 0%,   rgba(75,0,110,0.055) 0%, transparent 65%),
+    radial-gradient(ellipse 70% 25% at 50% 100%, rgba(201,153,0,0.05)  0%, transparent 60%),
+    #F7F7F7;
 }
 
 /* ── Reset ───────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { font-size: 16px; }
 body {
   font-family: var(--font-body);
   font-weight: 300;
   font-size: 18px;
   line-height: 1.85;
   color: var(--text);
-  background: var(--bg);
+  background: transparent;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
-a { color: var(--gold); text-decoration: none; transition: color var(--transition); }
-a:hover { color: var(--text); text-decoration: none; }
+a { color: var(--gold-deep); text-decoration: none; transition: color var(--transition); }
+a:hover { color: var(--text); }
 img { max-width: 100%; display: block; }
 ul, ol { padding-left: 1.5rem; }
 
@@ -61,12 +78,8 @@ p:last-child { margin-bottom: 0; }
   width: min(var(--content-max), 100% - 3rem);
   margin: 0 auto;
 }
-.prose {
-  max-width: var(--text-max);
-}
-.main-content {
-  padding-top: 5rem;
-}
+.prose { max-width: var(--text-max); }
+.main-content { padding-top: 5rem; }
 
 /* ── Section dividers ────────────────────────────────────── */
 hr.section-divider {
@@ -79,9 +92,9 @@ hr.section-divider {
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   padding: 1.25rem 0;
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(247,247,247,0.90);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
 }
 .nav-inner {
@@ -91,11 +104,12 @@ nav {
   font-family: var(--font-serif);
   font-size: 1.2rem;
   font-weight: 400;
-  color: var(--text);
+  color: var(--purple);
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition: color var(--transition);
 }
-.nav-logo:hover { color: var(--gold); }
+.nav-logo:hover { color: var(--gold-deep); }
 .nav-links {
   display: flex; align-items: center; gap: 2.25rem;
 }
@@ -104,7 +118,7 @@ nav {
   font-size: 0.875rem;
   font-weight: 400;
   color: var(--text-2);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.025em;
   position: relative;
   padding-bottom: 2px;
   text-decoration: none;
@@ -187,7 +201,8 @@ footer p {
 
 /* ── Hero ─────────────────────────────────────────────────── */
 .hero {
-  padding: 7rem 0 4rem;
+  padding: 7rem 0 5rem;
+  background: radial-gradient(ellipse 90% 70% at 50% 0%, rgba(211,175,55,0.08) 0%, transparent 65%);
 }
 .hero h1 {
   font-family: var(--font-serif);
@@ -230,12 +245,12 @@ footer p {
 .research-questions li::before {
   content: counter(rq, decimal-leading-zero);
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--gold);
-  opacity: 0.7;
+  font-size: 0.68rem;
+  color: var(--purple);
+  opacity: 0.65;
   letter-spacing: 0.04em;
   flex-shrink: 0;
-  margin-top: 0.15rem;
+  margin-top: 0.18rem;
 }
 
 /* ── Category chip ───────────────────────────────────────── */
@@ -246,7 +261,7 @@ footer p {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   background: var(--gold-dim);
-  color: var(--gold);
+  color: var(--gold-deep);
   border: 1px solid var(--gold-border);
   padding: 3px 10px;
   border-radius: 3px;
@@ -272,7 +287,7 @@ footer p {
   color: var(--text);
   font-weight: 400;
 }
-.memo-list-item a:hover { color: var(--gold); }
+.memo-list-item a:hover { color: var(--gold-deep); }
 .memo-meta-row {
   display: flex;
   align-items: center;
@@ -292,27 +307,32 @@ footer p {
   margin-top: 2rem;
   font-family: var(--font-mono);
   font-size: 0.78rem;
-  color: var(--gold);
+  color: var(--gold-deep);
   letter-spacing: 0.04em;
   text-decoration: none;
 }
 .view-all-link:hover { color: var(--text); }
 
 /* ── Aether tease ────────────────────────────────────────── */
+/*
+  The word appears once. No label. No link.
+  Something was here. Something is being built.
+*/
 .aether-tease {
-  min-height: 52vh;
+  min-height: 55vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin-top: 2rem;
+  background:
+    radial-gradient(ellipse 80% 100% at 50% 50%, rgba(75,0,110,0.05) 0%, transparent 70%);
 }
 .aether-word {
   font-family: var(--font-serif);
   font-size: clamp(8rem, 17vw, 22rem);
   font-weight: 300;
-  color: var(--gold);
-  opacity: 0.18;
+  color: var(--purple);
+  opacity: 0.14;
   line-height: 1;
   user-select: none;
   pointer-events: none;
@@ -393,7 +413,7 @@ footer p {
 .memo-body code {
   font-family: var(--font-mono);
   font-size: 0.85em;
-  background: var(--bg-3);
+  background: var(--bg-2);
   padding: 2px 6px;
   border-radius: 3px;
 }
@@ -450,21 +470,21 @@ footer p {
   border: 1px solid var(--gold-border);
   border-radius: 4px;
   padding: 1.75rem;
-  background: var(--bg);
+  background: rgba(255,255,255,0.65);
   transition: border-color var(--transition), background var(--transition);
 }
 .research-cluster:hover {
   border-color: var(--gold);
-  background: var(--bg-2);
+  background: rgba(255,255,255,0.90);
 }
 .cluster-number {
   display: block;
   font-family: var(--font-mono);
   font-size: 0.68rem;
-  color: var(--gold);
+  color: var(--purple);
   letter-spacing: 0.08em;
   margin-bottom: 0.5rem;
-  opacity: 0.8;
+  opacity: 0.70;
 }
 .cluster-name {
   font-family: var(--font-serif);
@@ -496,9 +516,6 @@ footer p {
 }
 .about-page .page-header h1 {
   font-size: clamp(2.4rem, 5vw, 3.4rem);
-}
-.about-page .page-header .page-subtitle {
-  font-style: normal;
 }
 .about-section {
   margin-bottom: 3rem;
@@ -534,14 +551,14 @@ footer p {
 .contact-links-list a {
   font-family: var(--font-mono);
   font-size: 0.85rem;
-  color: var(--gold);
+  color: var(--gold-deep);
   letter-spacing: 0.02em;
 }
 .contact-links-list a:hover { color: var(--text); }
 
 /* ── Focus / a11y ────────────────────────────────────────── */
 :focus-visible {
-  outline: 2px solid var(--gold);
+  outline: 2px solid var(--purple);
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -557,7 +574,7 @@ footer p {
     gap: 1rem;
     position: absolute;
     top: 100%; left: 0; right: 0;
-    background: rgba(255,255,255,0.97);
+    background: rgba(247,247,247,0.97);
     padding: 1.5rem 1.75rem;
     border-bottom: 1px solid var(--border);
   }
@@ -569,14 +586,11 @@ footer p {
 
   .research-grid { grid-template-columns: 1fr; }
 
-  .aether-word {
-    font-size: clamp(5rem, 28vw, 8rem);
-  }
+  .aether-word { font-size: clamp(5rem, 28vw, 8rem); }
 
   hr.section-divider { margin: 3rem 0; }
 
   .memo-title { max-width: none; }
-
   .memo-layout,
   .field-note-layout { padding: 2rem 0 4rem; }
 }

@@ -9,4 +9,4 @@ status: draft
 
 When a person interacts with an AI across many sessions, what makes them feel they are talking to the same entity? This is not a cosmetic question. The answer has implications for trust, relationship formation, and the ethics of AI design.
 
-The full memo will examine what consistency of character, memory, and response actually contributes to the perception of persistent identity — and where perception diverges from architectural reality.
+The full memo will examine what consistency of character, memory, and response actually contributes to the perception of persistent identity, and where perception diverges from architectural reality.
