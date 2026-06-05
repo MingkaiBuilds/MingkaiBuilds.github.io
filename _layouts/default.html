@@ -1,28 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-  <meta property="og:description" content="{{ site.description }}" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌙</text></svg>" />
+  {% include head.html %}
 </head>
 <body>
 
   {% include nav.html %}
 
-  <main>
+  <main class="main-content">
     {{ content }}
   </main>
 
   <footer>
     <div class="container">
-      <p>© {{ "now" | date: "%Y" }} Mikail Stewart <span class="footer-chi">明凯</span> — Built with intention.</p>
+      <p>© {{ "now" | date: "%Y" }} Mikail Stewart · Computational Identity Continuity</p>
     </div>
   </footer>
 

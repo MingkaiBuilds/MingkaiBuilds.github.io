@@ -1,13 +1,12 @@
 <nav>
   <div class="container nav-inner">
-    <a href="{{ '/' | relative_url }}" class="nav-logo" aria-label="Home">
-      MS <span class="chi">明凯</span>
-    </a>
+    <a href="{{ '/' | relative_url }}" class="nav-logo" aria-label="Home">明凯</a>
     <div class="nav-links" id="nav-links">
-      <a href="{{ '/' | relative_url }}">home</a>
-      <a href="{{ '/projects' | relative_url }}">projects</a>
-      <a href="{{ '/about' | relative_url }}">about</a>
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">◐ theme</button>
+      <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active"{% endif %}>Home</a>
+      <a href="{{ '/memos' | relative_url }}"{% if page.url contains '/memos' %} class="active"{% endif %}>Memos</a>
+      <a href="{{ '/field-notes' | relative_url }}"{% if page.url contains '/field-notes' %} class="active"{% endif %}>Field Notes</a>
+      <a href="{{ '/research-map' | relative_url }}"{% if page.url contains '/research-map' %} class="active"{% endif %}>Research Map</a>
+      <a href="{{ '/about' | relative_url }}"{% if page.url contains '/about' %} class="active"{% endif %}>About</a>
     </div>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">☰</button>
   </div>

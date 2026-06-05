@@ -1,19 +1,21 @@
 title: Mikail Stewart
-description: Full-stack engineer exploring NLP + product systems.
+description: Research on Computational Identity Continuity
 author: Mikail Stewart
-email: <EMAIL>
+email: ms3554@princeton.edu
 baseurl: ""
-url: "https://<YOUR_GITHUB_USERNAME>.github.io"
-
-github_username: <GITHUB_USERNAME>
-linkedin_username: <LINKEDIN_USERNAME>
+url: "https://MingkaiBuilds.github.io"
 
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
 
-# github-pages gem already bundles all allowed plugins
-# do NOT list them here to avoid double-require conflicts
+collections:
+  memos:
+    output: true
+    permalink: /memos/:name/
+  field_notes:
+    output: true
+    permalink: /field-notes/:name/
 
 exclude:
   - README.md
