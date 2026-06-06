@@ -4,6 +4,8 @@ title: Home
 description: Research on Computational Identity Continuity by Mikail Stewart.
 ---
 
+{% include aether-gate.html %}
+
 <!-- Hero -->
 <section class="hero">
   <div class="container">
@@ -102,8 +104,3 @@ description: Research on Computational Identity Continuity by Mikail Stewart.
 </section>
 
 </div>
-
-<!-- Aether tease -->
-<section class="aether-tease" aria-hidden="true">
-  <span class="aether-word">Aether</span>
-</section>
