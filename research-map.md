@@ -1,14 +1,14 @@
 ---
 layout: default
 title: Research Map
-description: A map of the ten research clusters of Computational Identity Continuity.
+description: A map of the ten research clusters of Computational Autonoetics.
 ---
 
 <div class="container">
 
   <div class="page-header">
-    <h1>Research Map of Computational Identity Continuity</h1>
-    <p class="page-subtitle">Ten clusters that define the territory of CIC research.</p>
+    <h1>Research Map of Computational Autonoetics</h1>
+    <p class="page-subtitle">Ten clusters that define the territory of CA research.</p>
   </div>
 
   <div class="research-grid">

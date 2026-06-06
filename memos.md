@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Memos
-description: Research memos on Computational Identity Continuity, organized by category.
+description: Research memos on Computational Autonoetics, organized by category.
 ---
 
 <div class="container">

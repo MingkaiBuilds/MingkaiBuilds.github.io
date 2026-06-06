@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Field Notes
-description: Observations and fragments on Computational Identity Continuity research.
+description: Observations and fragments on Computational Autonoetics research.
 ---
 
 <div class="container">

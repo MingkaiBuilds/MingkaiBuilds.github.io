@@ -1,7 +1,7 @@
 ---
 layout: default
 title: About
-description: Mikail Stewart, researcher on Computational Identity Continuity.
+description: Mikail Stewart, researcher on Computational Autonoetics.
 ---
 
 <div class="about-page">
