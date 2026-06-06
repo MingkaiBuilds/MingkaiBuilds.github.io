@@ -7,6 +7,7 @@ description: Research on Computational Autonoetics by Mikail Stewart.
 <!-- Hero -->
 <section class="hero">
   <div class="container">
+    <p class="hero-eyebrow">A research field</p>
     <h1>Building the foundations of Computational Autonoetics.</h1>
     <p class="hero-subtitle">
       Research memos on persistent AI identity, self-modeling, memory architecture,
@@ -21,8 +22,9 @@ description: Research on Computational Autonoetics by Mikail Stewart.
 <!-- Latest writing -->
 <section class="content-section">
   <h2>Latest writing</h2>
-  {% assign sorted_memos = site.memos | sort: "date" | reverse %}
-  {% assign latest = sorted_memos | limit: 3 %}
+  {% assign published_memos = site.memos | where: "status", "published" | sort: "date" | reverse %}
+  {% assign latest = published_memos | limit: 3 %}
+  {% if latest.size > 0 %}
   <div class="memo-list">
     {% for memo in latest %}
     <div class="memo-list-item">
@@ -35,6 +37,9 @@ description: Research on Computational Autonoetics by Mikail Stewart.
     {% endfor %}
   </div>
   <a href="{{ '/memos' | relative_url }}" class="view-all-link">All memos →</a>
+  {% else %}
+  <p class="empty-state">No published memos yet.</p>
+  {% endif %}
 </section>
 
 <hr class="section-divider">

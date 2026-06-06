@@ -11,7 +11,7 @@ description: Research memos on Computational Autonoetics, organized by category.
     <p class="page-subtitle">Long-form research, organized by thread.</p>
   </div>
 
-  {% assign sorted_memos = site.memos | sort: "date" | reverse %}
+  {% assign sorted_memos = site.memos | where: "status", "published" | sort: "date" | reverse %}
   {% assign categories = sorted_memos | map: "category" | uniq | sort %}
 
   {% for category in categories %}
