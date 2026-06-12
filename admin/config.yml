@@ -1,0 +1,116 @@
+backend:
+  name: github
+  repo: MingkaiBuilds/MingkaiBuilds.github.io
+  branch: master
+  # Set base_url to your Cloudflare Worker URL after completing external setup.
+  # Example: https://sveltia-cms-auth.<your-subdomain>.workers.dev
+  base_url: https://sveltia-cms-auth.mingkai-builds.workers.dev
+
+# Images/files uploaded through the editor land here.
+media_folder: "assets/uploads"
+
+# Solo author: publish commits directly to master; GitHub Pages rebuilds
+# automatically. No editorial review queue needed.
+publish_mode: simple
+
+collections:
+
+  # ── Memos ───────────────────────────────────────────────────────────────────
+  - name: memos
+    label: Memos
+    label_singular: Memo
+    folder: _memos
+    create: true
+    # Filename pattern: 2026-06-15-the-slug-from-title.md
+    slug: "{{year}}-{{month}}-{{day}}-{{fields.title | slugify}}"
+    extension: md
+    format: yaml-frontmatter
+    # The built-in preview pane isn't useful here (site has its own CSS);
+    # disable it to keep the editor full-width.
+    editor:
+      preview: false
+    summary: "{{title}} — {{date | date('YYYY-MM-DD')}} [{{status}}]"
+    sortable_fields: [date, title, status, category]
+    fields:
+      - name: layout
+        widget: hidden
+        default: memo
+
+      - name: title
+        label: Title
+        widget: string
+        hint: "Headline — used as the page <h1> and in all listing pages."
+
+      - name: date
+        label: Date
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        picker_utc: true
+        hint: "Publication date (YYYY-MM-DD). Used in the slug and displayed on the memo."
+
+      - name: category
+        label: Category
+        widget: select
+        options:
+          - Foundations
+          - Architecture
+          - Governance
+          - Consciousness-Relevance
+        hint: "Used for grouping on the Memos index page."
+
+      - name: description
+        label: Description
+        widget: text
+        hint: "One-sentence summary. Used in page <meta> and (future) memo cards."
+
+      - name: status
+        label: Status
+        widget: select
+        options:
+          - label: "Draft (not shown on site)"
+            value: draft
+          - label: "Published (visible on site)"
+            value: published
+        default: draft
+        hint: "Only published memos appear on the Memos page and homepage."
+
+      - name: body
+        label: Body
+        widget: markdown
+        hint: "Use the Definition Badge button (book icon) to insert a definition box."
+
+  # ── Field Notes ─────────────────────────────────────────────────────────────
+  - name: field_notes
+    label: "Field Notes"
+    label_singular: "Field Note"
+    folder: _field_notes
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{fields.title | slugify}}"
+    extension: md
+    format: yaml-frontmatter
+    editor:
+      preview: false
+    summary: "{{title}} — {{date | date('YYYY-MM-DD')}}"
+    sortable_fields: [date, title]
+    fields:
+      - name: layout
+        widget: hidden
+        default: field-note
+
+      - name: title
+        label: Title
+        widget: string
+
+      - name: date
+        label: Date
+        widget: datetime
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        picker_utc: true
+
+      - name: body
+        label: Body
+        widget: markdown

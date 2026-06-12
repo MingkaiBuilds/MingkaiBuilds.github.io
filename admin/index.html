@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Admin — Computational Autonoetics</title>
+  <script type="module" src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+</head>
+<body>
+  <script>
+    // Register the Definition Badge editor component once Sveltia CMS has
+    // loaded its global CMS object. The module script above is async, so we
+    // poll until window.CMS is available.
+    (function waitForCMS() {
+      if (typeof window.CMS === 'undefined') {
+        setTimeout(waitForCMS, 50);
+        return;
+      }
+
+      window.CMS.registerEditorComponent({
+        id: 'definition',
+        label: 'Definition Badge',
+        icon: 'menu_book',
+        // Opens a dialog rather than an inline block — cleaner for two-field
+        // components that don't need to show in the flow of the text.
+        mode: 'dialog',
+
+        fields: [
+          {
+            name:  'term',
+            label: 'Term',
+            widget: 'string',
+            hint: 'The concept being defined.',
+          },
+          {
+            name:  'definition',
+            label: 'Definition',
+            widget: 'text',
+            hint: 'Full definition sentence(s). No HTML.',
+          },
+        ],
+
+        // Match the existing shortcode exactly:
+        //   {% include definition.html term="…" definition="…" %}
+        // Named groups let fromBlock be omitted (Sveltia auto-extracts them).
+        pattern: /\{%\s*include definition\.html term="(?<term>[^"]*)" definition="(?<definition>[^"]*)"\s*%\}/,
+
+        // How to serialize the component back to the markdown file.
+        toBlock: ({ term, definition }) =>
+          `{% include definition.html term="${term}" definition="${definition}" %}`,
+
+        // Approximate in-editor preview (unstyled until Sveltia 1.0).
+        toPreview: ({ term, definition }) =>
+          `<aside style="border-left:3px solid #5B2A86;padding:1rem 1.25rem;margin:1.5rem 0;background:#fff">` +
+          `<span style="font-size:0.6rem;text-transform:uppercase;letter-spacing:0.12em;color:#5B2A86">Definition</span><br>` +
+          `<strong style="font-size:1.05rem">${term}</strong><br>` +
+          `<span style="font-size:0.95rem;color:#6B6358">${definition}</span>` +
+          `</aside>`,
+      });
+    })();
+  </script>
+</body>
+</html>
