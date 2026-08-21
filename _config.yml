@@ -1,5 +1,5 @@
 title: Mikail Stewart
-description: Research on Computational Autonoetics
+description: Princeton CS ’27. Computational autonoetics, frontier physical engineering, olympiad problem-solving, and thinking.
 author: Mikail Stewart
 email: ms3554@princeton.edu
 baseurl: ""
@@ -12,10 +12,10 @@ permalink: pretty
 collections:
   memos:
     output: true
-    permalink: /memos/:name/
+    permalink: /memory/memos/:name/
   field_notes:
     output: true
-    permalink: /field-notes/:name/
+    permalink: /memory/field-notes/:name/
 
 exclude:
   - README.md

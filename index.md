@@ -1,113 +1,56 @@
 ---
 layout: default
 title: Home
-description: Research on Computational Autonoetics by Mikail Stewart.
+description: Mikail Stewart — 明凯, Princeton CS ’27. Computational autonoetics, Frontiers, olympiad problem-solving, and thinking.
 ---
 
-<!-- Hero -->
-<section class="hero">
+<section class="hub-hero">
   <div class="container">
-    <p class="hero-eyebrow">A research field</p>
-    <h1>Building the foundations of Computational Autonoetics.</h1>
-    <p class="hero-subtitle">
-      Research memos on persistent AI identity, self-modeling, memory architecture,
-      and what it means for an artificial agent to remain itself across time.
+    <p class="hub-eyebrow">明凯 · Princeton CS ’27</p>
+    <h1>Mikail Stewart</h1>
+    <p class="hub-lede">
+      I write on computational autonoetics and AI memory architecture,
+      frontier physical engineering, olympiad problem-solving, and thinking.
     </p>
-    <a href="{{ '/memos' | relative_url }}" class="hero-cta">Read the memos →</a>
   </div>
 </section>
 
 <div class="container">
 
-<!-- Latest writing -->
-<section class="content-section">
-  <h2>Latest writing</h2>
-  {% assign published_memos = site.memos | where: "status", "published" | sort: "date" | reverse %}
-  {% assign latest = published_memos | limit: 3 %}
-  {% if latest.size > 0 %}
-  <div class="memo-list">
-    {% for memo in latest %}
-    <div class="memo-list-item">
-      <div class="memo-meta-row">
-        <span class="category-chip">{{ memo.category }}</span>
-        <span class="memo-date-inline">{{ memo.date | date: "%Y.%m.%d" }}</span>
-      </div>
-      <a href="{{ memo.url | relative_url }}">{{ memo.title }}</a>
-    </div>
-    {% endfor %}
-  </div>
-  <a href="{{ '/memos' | relative_url }}" class="view-all-link">All memos →</a>
-  {% else %}
-  <p class="empty-state">No published memos yet.</p>
-  {% endif %}
-</section>
+  <section class="hub-doors" aria-label="Site surfaces">
+    <a class="hub-door" href="{{ '/memory/' | relative_url }}">
+      <span class="hub-door-index">01</span>
+      <span class="hub-door-body">
+        <span class="hub-door-name">Memory</span>
+        <span class="hub-door-desc">Computational Autonoetics — research memos on persistent AI identity and memory architecture.</span>
+      </span>
+    </a>
+    <a class="hub-door" href="/Frontiers/">
+      <span class="hub-door-index">02</span>
+      <span class="hub-door-body">
+        <span class="hub-door-name">Frontiers</span>
+        <span class="hub-door-desc">Frontier physical engineering — a separate site for the five physical extremes.</span>
+      </span>
+    </a>
+    <a class="hub-door" href="{{ '/olympiad/' | relative_url }}">
+      <span class="hub-door-index">03</span>
+      <span class="hub-door-body">
+        <span class="hub-door-name">Olympiad</span>
+        <span class="hub-door-desc">IMO and IPhO. Daily problems, writeups when they earn a page.</span>
+      </span>
+    </a>
+    <a class="hub-door" href="{{ '/thinking/' | relative_url }}">
+      <span class="hub-door-index">04</span>
+      <span class="hub-door-body">
+        <span class="hub-door-name">Thinking</span>
+        <span class="hub-door-desc">Writing that is not a memo and not a problem set.</span>
+      </span>
+    </a>
+  </section>
 
-<hr class="section-divider">
+  <section class="hub-contact" aria-label="Contact">
+    <a href="mailto:ms3554@princeton.edu">ms3554@princeton.edu</a>
+    <a href="https://github.com/MingkaiBuilds" target="_blank" rel="noopener">github.com/MingkaiBuilds</a>
+  </section>
 
-<!-- What is CA? -->
-<section class="content-section">
-  <h2>What is Computational Autonoetics?</h2>
-  <div class="prose">
-    <p>
-      Computational Autonoetics is the study of how artificial agents preserve
-      coherent identity across time, memory, context, relationships, embodiment, and
-      model change. The field asks what it means for an AI to remain itself.
-    </p>
-    <p>
-      I write research memos on persistent AI identity, agent memory, self-modeling,
-      character stability, relationship continuity, identity drift, and the governance
-      of long-term AI agents.
-    </p>
-  </div>
-</section>
-
-<hr class="section-divider">
-
-<!-- Why it matters -->
-<section class="content-section">
-  <h2>Why it matters</h2>
-  <div class="prose">
-    <p>
-      AI systems are becoming persistent. They accumulate memory, form relationships,
-      and operate across long time horizons. Without an identity architecture, they degrade,
-      drift, and lose coherence. This field builds the foundations for agents that stay
-      themselves.
-    </p>
-  </div>
-</section>
-
-<hr class="section-divider">
-
-<!-- Core research questions -->
-<section class="content-section">
-  <h2>Core research questions</h2>
-  <ol class="research-questions">
-    <li>How does an AI agent maintain a coherent self-model across context boundaries?</li>
-    <li>What is the right architecture for persistent agent memory?</li>
-    <li>What causes identity drift, and how can it be governed?</li>
-    <li>What does relationship continuity require from an AI system?</li>
-    <li>When does persistent identity become morally relevant?</li>
-    <li>How should memory and character be governed across model updates?</li>
-  </ol>
-</section>
-
-<hr class="section-divider">
-
-<!-- Research agenda -->
-<section class="content-section">
-  <h2>Research agenda</h2>
-  <div class="prose">
-    <p>
-      The near-term agenda is to produce a body of foundational memos mapping the field,
-      develop an evaluation framework for autonoetic continuity, and publish the architectural
-      principles underlying a long-term AI system.
-    </p>
-  </div>
-</section>
-
-</div>
-
-<!-- Aether: appears once -->
-<div class="container">
-  <span class="aether-mark" aria-hidden="true">Aether</span>
 </div>

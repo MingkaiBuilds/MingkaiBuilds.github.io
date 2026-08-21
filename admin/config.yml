@@ -74,7 +74,7 @@ collections:
           - label: "Published (visible on site)"
             value: published
         default: draft
-        hint: "Only published memos appear on the Memos page and homepage."
+        hint: "Only published memos appear on the Memory memos page and /memory home."
 
       - name: body
         label: Body

@@ -514,6 +514,154 @@ footer p {
   pointer-events: none;
 }
 
+/* ── Hub (personal introducer) ───────────────────────────── */
+.hub-hero {
+  padding: 6.5rem 0 2.25rem;
+}
+.hub-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.70rem;
+  font-weight: 400;
+  letter-spacing: 0.10em;
+  color: var(--purple);
+  margin-bottom: 1.25rem;
+}
+.hub-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  max-width: none;
+  margin-bottom: 1.25rem;
+}
+.hub-lede {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-2);
+  max-width: 46ch;
+  margin-bottom: 0;
+}
+.hub-doors {
+  display: flex;
+  flex-direction: column;
+  margin: 3.5rem 0 0;
+  border-top: 1px solid var(--border);
+}
+.hub-door {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+}
+.hub-door:hover { color: inherit; }
+.hub-door-index {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--purple);
+  opacity: 0.65;
+  letter-spacing: 0.04em;
+  margin-top: 0.4rem;
+  flex-shrink: 0;
+}
+.hub-door-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.hub-door-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.hub-door:hover .hub-door-name { color: var(--purple); }
+.hub-door-desc {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text-2);
+}
+.hub-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+.hub-contact a {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--purple);
+  letter-spacing: 0.02em;
+}
+.hub-contact a:hover { color: var(--gold); }
+
+/* ── Shared surface hero (olympiad, thinking) ────────────── */
+.surface-hero {
+  padding: 5.5rem 0 2.5rem;
+}
+.surface-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+
+/* ── Olympiad ────────────────────────────────────────────── */
+.daily-board {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.daily-slot {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.75rem;
+}
+.daily-slot-track {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 0.75rem;
+}
+.daily-slot-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.01em;
+}
+.daily-slot-copy {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--text-2);
+  margin: 0;
+  max-width: var(--text-max);
+}
+.track-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+/* ── About, when it uses hub chrome ──────────────────────── */
+.about-page .hub-eyebrow { margin-bottom: 0.85rem; }
+.about-page .page-header { padding-bottom: 1.5rem; }
+.about-doors { margin-top: 0.25rem; }
+
 /* ── Focus / a11y ────────────────────────────────────────── */
 :focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; border-radius: 2px; }
 
@@ -536,7 +684,11 @@ footer p {
   .hero { padding: 5rem 0 3.5rem; }
   .hero h1 { max-width: none; letter-spacing: -0.015em; }
 
-  .research-grid { grid-template-columns: 1fr; }
+  .research-grid,
+  .track-grid { grid-template-columns: 1fr; }
+
+  .hub-hero { padding: 5rem 0 1.75rem; }
+  .surface-hero { padding: 4.25rem 0 2rem; }
 
   hr.section-divider { margin: 3rem 0; }
   .memo-title { max-width: none; }

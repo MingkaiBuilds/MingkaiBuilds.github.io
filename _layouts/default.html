@@ -3,7 +3,11 @@
 <head>
   {% include head.html %}
 </head>
-<body>
+{% assign on_memory = false %}
+{% if page.url == '/memory/' or page.url contains '/memory/' %}
+  {% assign on_memory = true %}
+{% endif %}
+<body{% if on_memory %} class="surface-memory"{% elsif page.url contains '/olympiad/' %} class="surface-olympiad"{% elsif page.url contains '/thinking/' %} class="surface-thinking"{% else %} class="surface-hub"{% endif %}>
 
   {% include nav.html %}
 
@@ -13,7 +17,11 @@
 
   <footer>
     <div class="container">
+      {% if on_memory %}
       <p>© {{ "now" | date: "%Y" }} Mikail Stewart · Computational Autonoetics</p>
+      {% else %}
+      <p>© {{ "now" | date: "%Y" }} Mikail Stewart</p>
+      {% endif %}
     </div>
   </footer>
 
