@@ -151,6 +151,8 @@ footer p {
   letter-spacing: 0.04em;
   margin: 0;
 }
+footer a { color: inherit; }
+footer a:hover { color: var(--purple); }
 
 /* ── Page header ─────────────────────────────────────────── */
 .page-header {
