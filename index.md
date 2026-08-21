@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Home
-description: Mikail Stewart — 明凯, Princeton CS ’27. Computational autonoetics, Frontiers, olympiad problem-solving, and thinking.
+description: Mikail Stewart — 明凯, Princeton CS ’27.
 ---
 
 <section class="hub-hero">
@@ -9,48 +9,72 @@ description: Mikail Stewart — 明凯, Princeton CS ’27. Computational autono
     <p class="hub-eyebrow">明凯 · Princeton CS ’27</p>
     <h1>Mikail Stewart</h1>
     <p class="hub-lede">
-      I write on computational autonoetics and AI memory architecture,
-      frontier physical engineering, olympiad problem-solving, and thinking.
+      I am a Computer Science student at Princeton. This is the personal site:
+      who I am, what I am interested in, and how I look at the world.
+      The work lives on other websites.
     </p>
   </div>
 </section>
 
 <div class="container">
 
-  <section class="hub-doors" aria-label="Site surfaces">
-    <a class="hub-door" href="{{ '/memory/' | relative_url }}">
-      <span class="hub-door-index">01</span>
-      <span class="hub-door-body">
-        <span class="hub-door-name">Memory</span>
-        <span class="hub-door-desc">Computational Autonoetics — research memos on persistent AI identity and memory architecture.</span>
-      </span>
-    </a>
-    <a class="hub-door" href="/Frontiers/">
-      <span class="hub-door-index">02</span>
-      <span class="hub-door-body">
-        <span class="hub-door-name">Frontiers</span>
-        <span class="hub-door-desc">Frontier physical engineering — a separate site for the five physical extremes.</span>
-      </span>
-    </a>
-    <a class="hub-door" href="{{ '/olympiad/' | relative_url }}">
-      <span class="hub-door-index">03</span>
-      <span class="hub-door-body">
-        <span class="hub-door-name">Olympiad</span>
-        <span class="hub-door-desc">IMO and IPhO. Daily problems, writeups when they earn a page.</span>
-      </span>
-    </a>
-    <a class="hub-door" href="{{ '/thinking/' | relative_url }}">
-      <span class="hub-door-index">04</span>
-      <span class="hub-door-body">
-        <span class="hub-door-name">Thinking</span>
-        <span class="hub-door-desc">Writing that is not a memo and not a problem set.</span>
-      </span>
-    </a>
+  <section class="hub-section">
+    <h2>What I am interested in</h2>
+    <ul class="plain-list">
+      <li>Computational autonoetics and AI memory architecture</li>
+      <li>Frontier physical engineering</li>
+      <li>Olympiad problem-solving</li>
+      <li>Thinking and writing</li>
+    </ul>
   </section>
 
-  <section class="hub-contact" aria-label="Contact">
-    <a href="mailto:ms3554@princeton.edu">ms3554@princeton.edu</a>
-    <a href="https://github.com/MingkaiBuilds" target="_blank" rel="noopener">github.com/MingkaiBuilds</a>
+  <hr class="section-divider">
+
+  <section class="hub-section">
+    <h2>How I see the world</h2>
+    <div class="prose">
+      <p>
+        This section is for that writing when I have it. I am not going to
+        invent a manifesto in order to occupy the space.
+      </p>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <section class="hub-section">
+    <h2>Other websites</h2>
+    <p class="section-note">These are separate sites. Leaving this one is the point.</p>
+    <ul class="elsewhere">
+      <li>
+        <a href="https://mingkaibuilds.github.io/memory/">
+          <span class="elsewhere-name">Memory</span>
+          <span class="elsewhere-url">mingkaibuilds.github.io/memory</span>
+        </a>
+        <p>Computational autonoetics and AI memory architecture.</p>
+      </li>
+      <li>
+        <a href="https://mingkaibuilds.github.io/Frontiers/">
+          <span class="elsewhere-name">Frontiers</span>
+          <span class="elsewhere-url">mingkaibuilds.github.io/Frontiers</span>
+        </a>
+        <p>Frontier physical engineering.</p>
+      </li>
+      <li>
+        <a href="https://mingkaibuilds.github.io/olympiad/">
+          <span class="elsewhere-name">Olympiad</span>
+          <span class="elsewhere-url">mingkaibuilds.github.io/olympiad</span>
+        </a>
+        <p>Olympiad problem-solving.</p>
+      </li>
+      <li>
+        <a href="https://mingkaibuilds.github.io/thinking/">
+          <span class="elsewhere-name">Thinking</span>
+          <span class="elsewhere-url">mingkaibuilds.github.io/thinking</span>
+        </a>
+        <p>Thinking and writing.</p>
+      </li>
+    </ul>
   </section>
 
 </div>

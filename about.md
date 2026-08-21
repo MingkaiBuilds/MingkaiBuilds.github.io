@@ -4,69 +4,70 @@ title: About
 description: Mikail Stewart — 明凯, Princeton CS ’27.
 ---
 
-<div class="about-page">
-  <div class="container">
+<div class="container">
 
-    <div class="page-header">
-      <p class="hub-eyebrow">明凯 · Mingkai</p>
-      <h1>Mikail Stewart</h1>
-      <p class="page-subtitle">Princeton CS ’27</p>
-    </div>
+  <div class="page-header">
+    <p class="hub-eyebrow">明凯 · Mingkai</p>
+    <h1>Mikail Stewart</h1>
+    <p class="page-subtitle">Princeton CS ’27</p>
+  </div>
 
-    <div class="about-section">
-      <p class="opening-statement">
-        I am a Computer Science student at Princeton. This site is the public
-        index of the work I write: computational autonoetics and AI memory
-        architecture, frontier physical engineering, olympiad problem-solving,
-        and thinking.
+  <div class="prose">
+    <p>
+      I am a Computer Science student at Princeton. This website is only the
+      personal one. It is for saying who I am, what I attend to, and — when I
+      have written it — how I view the world.
+    </p>
+    <p>
+      I do not publish the work itself here. Computational autonoetics, frontier
+      physical engineering, olympiad problem-solving, and thinking each have
+      their own site.
+    </p>
+  </div>
+
+  <hr class="section-divider">
+
+  <section class="hub-section">
+    <h2>How I see the world</h2>
+    <div class="prose">
+      <p>
+        I have not written this down on this site yet. When I do, it will live
+        in this section. Until then I will leave it empty rather than perform
+        a worldview I have not stated.
       </p>
     </div>
+  </section>
 
-    <hr class="section-divider">
+  <hr class="section-divider">
 
-    <div class="about-section">
-      <h2>Four surfaces</h2>
-      <div class="hub-doors about-doors">
-        <a class="hub-door" href="{{ '/memory/' | relative_url }}">
-          <span class="hub-door-index">01</span>
-          <span class="hub-door-body">
-            <span class="hub-door-name">Memory</span>
-            <span class="hub-door-desc">The Computational Autonoetics site — memos, field notes, and the research map.</span>
-          </span>
+  <section class="hub-section">
+    <h2>Other websites</h2>
+    <ul class="elsewhere">
+      <li>
+        <a href="https://mingkaibuilds.github.io/memory/">
+          <span class="elsewhere-name">Memory</span>
+          <span class="elsewhere-url">mingkaibuilds.github.io/memory</span>
         </a>
-        <a class="hub-door" href="/Frontiers/">
-          <span class="hub-door-index">02</span>
-          <span class="hub-door-body">
-            <span class="hub-door-name">Frontiers</span>
-            <span class="hub-door-desc">A separate project site for frontier physical engineering.</span>
-          </span>
+      </li>
+      <li>
+        <a href="https://mingkaibuilds.github.io/Frontiers/">
+          <span class="elsewhere-name">Frontiers</span>
+          <span class="elsewhere-url">mingkaibuilds.github.io/Frontiers</span>
         </a>
-        <a class="hub-door" href="{{ '/olympiad/' | relative_url }}">
-          <span class="hub-door-index">03</span>
-          <span class="hub-door-body">
-            <span class="hub-door-name">Olympiad</span>
-            <span class="hub-door-desc">IMO and IPhO problems, worked in public.</span>
-          </span>
+      </li>
+      <li>
+        <a href="https://mingkaibuilds.github.io/olympiad/">
+          <span class="elsewhere-name">Olympiad</span>
+          <span class="elsewhere-url">mingkaibuilds.github.io/olympiad</span>
         </a>
-        <a class="hub-door" href="{{ '/thinking/' | relative_url }}">
-          <span class="hub-door-index">04</span>
-          <span class="hub-door-body">
-            <span class="hub-door-name">Thinking</span>
-            <span class="hub-door-desc">Notes and arguments that do not belong to a research field or a problem set.</span>
-          </span>
+      </li>
+      <li>
+        <a href="https://mingkaibuilds.github.io/thinking/">
+          <span class="elsewhere-name">Thinking</span>
+          <span class="elsewhere-url">mingkaibuilds.github.io/thinking</span>
         </a>
-      </div>
-    </div>
+      </li>
+    </ul>
+  </section>
 
-    <hr class="section-divider">
-
-    <div class="about-section">
-      <h2>Contact</h2>
-      <div class="contact-links-list">
-        <a href="mailto:ms3554@princeton.edu">ms3554@princeton.edu</a>
-        <a href="https://github.com/MingkaiBuilds" target="_blank" rel="noopener">github.com/MingkaiBuilds</a>
-      </div>
-    </div>
-
-  </div>
 </div>

@@ -1,5 +1,5 @@
 title: Mikail Stewart
-description: Princeton CS ’27. Computational autonoetics, frontier physical engineering, olympiad problem-solving, and thinking.
+description: Mikail Stewart — 明凯, Princeton CS ’27.
 author: Mikail Stewart
 email: ms3554@princeton.edu
 baseurl: ""
@@ -8,14 +8,6 @@ url: "https://MingkaiBuilds.github.io"
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
-
-collections:
-  memos:
-    output: true
-    permalink: /memory/memos/:name/
-  field_notes:
-    output: true
-    permalink: /memory/field-notes/:name/
 
 exclude:
   - README.md
